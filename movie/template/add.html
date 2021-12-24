@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block body %}
+<div class="container">
+<form style="text-align:center;" method="POST" enctype="multipart/form-data">
+  {% csrf_token%}
+  <div class="form-group">
+    <label >Movie Name</label>
+    <input type="text" class="form-control text-center" name="name"  placeholder="Movie Name">
+    <small id="emailHelp" class="form-text text-muted">Please type the movie name you're about to upload</small>
+  </div>
+  <div class="form-group">
+    <label >Description</label>
+    <input type="text" class="form-control text-center" name="desc" placeholder="Discription">
+  </div>
+  <div class="form-group">
+    <label >Movie_year</label>
+    <input type="text" class="form-control text-center" name="year" placeholder=" movie year ">
+  </div>
+    <div class="form-group">
+    <label >Price</label>
+    <input type="text" class="form-control text-center"  name="price" placeholder="Movie price   ">
+  </div>
+    <div class="form-group">
+    <label >Image</label>
+    <input type="file" class="form-control text-center" name="img" placeholder="movie image">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock%}

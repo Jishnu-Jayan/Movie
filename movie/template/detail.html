@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block body %}
+  <div class="container" >
+  <img class="card-img-top" style="display: block; margin-left: auto; margin-right: auto; height:500px ; width:300px;"src="{{id.img.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title" style="text-align:center">{{id.name}}</h5>
+    <p class="card-text"style="text-align:center">{{id.desc}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"style="text-align:center">{{id.year}}</li>
+    <li class="list-group-item"style="text-align:center">{{id.price}}</li>
+  </ul>
+  <div class="card-body">
+      <a class="btn btn-primary" href="{% url 'movieapp:update' id.id%}">update</a>
+    <a class="btn btn-primary" href="{% url 'movieapp:delete' id.id%}">delete</a>
+  </div>
+
+</div>
+{% endblock %}
